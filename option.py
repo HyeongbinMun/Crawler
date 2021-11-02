@@ -18,8 +18,8 @@ def google_option(search):
     return driver
 
 def instagram_option(search):
-    user_id = "bin96525"
-    user_passwd = "rydbrqud1!"
+    user_id = "id"
+    user_passwd = "passwd"
     instagram_id_name = "username"
     instagram_pw_name = "password"
     instagram_login_btn = ".sqdOP.L3NKy.y3zKF     "
