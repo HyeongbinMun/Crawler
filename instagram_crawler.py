@@ -17,17 +17,17 @@ class Instagram_Crawler:
 
     def get_img(self, keword):
         imglist = []
-        for i in range(0, 5):
+        for i in range(0, 10):
             insta = self.soup.select('.v1Nh3.kIKUG._bz0w')
             for i in insta:
                 imgUrl = i.select_one('.KL4Bh').img['src']
                 imglist.append(imgUrl)
                 imglist = list(set(imglist))
-                html = self.driver.page_source
-                soup = BeautifulSoup(html)
-                insta = self.soup.select('.v1Nh3.kIKUG._bz0w')
+                self.html = self.driver.page_source
+                self.soup = BeautifulSoup(self.html)
             self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            time.sleep(2)
+            print(len(imglist))
+            time.sleep(5)
         n = 0
         for i in range(0, self.limit_img):
             image_url = imglist[n]
