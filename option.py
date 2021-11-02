@@ -3,7 +3,7 @@ from urllib.parse import quote_plus
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
-
+# dkdk
 def google_option(search):
     options = Options()
     options.add_argument('--kiosk')
